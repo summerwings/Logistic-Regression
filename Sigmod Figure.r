@@ -1,4 +1,3 @@
-
 #Sigmoid function and Linear function 
 z <- seq(from = -10, to = 10, by = 0.01)
 y = 2*x + 13
