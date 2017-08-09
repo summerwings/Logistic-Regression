@@ -1,3 +1,4 @@
+# Linear decision boundary 
 import random
 from numpy import loadtxt, where  
 from pylab import scatter, show, legend, xlabel, ylabel
