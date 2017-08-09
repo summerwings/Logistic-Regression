@@ -28,4 +28,6 @@ for i in range(1000):
 # plot        
 scatter(x0,y0,marker='o',c='b')
 scatter(x1,y1,marker='x',c='r')
+Y = [-i + 3 for i in range(6)]
+plot(range(6),Y )
 show()  
