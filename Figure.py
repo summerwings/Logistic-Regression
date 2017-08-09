@@ -1,15 +1,31 @@
-# Linear decision boundary 
+# Linear decision boundary(Y= - X + 3) 
+
 import random
 from numpy import where
-from pylab import scatter, show, legend, xlabel, ylabel
+from pylab import scatter, show
 
-X = 10*[random.random(1,3)] + 10*[random.random(3,6)]
-y = [1]*10 + [0]*10  
+x = []
+y = []
+x0 = []
+y0 = []
+x1 = []
+y1 = []
 
-pos = where(y == 1)  
-neg = where(y == 0)  
+# generate
+for i in range(1000):
+    x.append(random.uniform(0,6))
+    y.append(-random.uniform(0,6)+3)
 
-scatter(X[pos, 0], X[pos, 1], marker='o', c='b')  
-scatter(X[neg, 0], X[neg, 1], marker='x', c='r')  
+# classify    
+for i in range(1000):
+    if -x[i] + 3 <= y[i]:
+        x0.append(x[i])
+        y0.append(y[i])
+    else:
+        x1.append(x[i])
+        y1.append(y[i])
 
+# plot        
+scatter(x0,y0,marker='o',c='b')
+scatter(x1,y1,marker='x',c='r')
 show()  
